@@ -1,4 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../styles/mixins';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root {
+    --bg-color: hsl(210, 20%, 30%);
+    --white-color: #fff;
+    --dark-color: hsl(210, 20%, 13%);
+    --contrast-color: hsl(38, 100%, 50%);
+    --light-color: hsl(38, 100%, 95%);
+    --radius: 0.25rem;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: var(--bg-color);
+    color:var(--white-color);
+}
+
+h1 {
+    font-size: 3rem;
+    color:var(--white-color);
+    @include text-shadow-effect;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

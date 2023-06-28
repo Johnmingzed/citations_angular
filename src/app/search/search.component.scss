@@ -1,0 +1,12 @@
+@import '../../../styles/mixins';
+
+#search {
+    padding: .5em 1em;
+    border-radius: var(--radius);
+    font-size: 1rem;
+    border-style: none;
+    color: var(--dark-color);
+    width: 28rem;
+    margin-bottom: 2em;
+    @include box-shadow-effect;
+}

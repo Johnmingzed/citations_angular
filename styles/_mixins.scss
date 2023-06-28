@@ -1,0 +1,26 @@
+$offset-increment: 0.1rem;
+$light-value: 13;
+
+@mixin text-shadow-effect {
+    $text-shadow: ();
+
+    @for $i from 1 through 15 {
+        $offset: $i * $offset-increment;
+        $value: $light-value + $i;
+        $text-shadow: append($text-shadow, $offset $offset 0 hsl(210, 20%, percentage(calc($value / 100))), comma);
+    }
+
+    text-shadow: $text-shadow;
+}
+
+@mixin box-shadow-effect {
+    $box-shadow: ();
+
+    @for $i from 1 through 15 {
+        $offset: $i * $offset-increment;
+        $value: $light-value + $i;
+        $box-shadow: append($box-shadow, $offset $offset 0 hsl(210, 20%, percentage(calc($value / 100))), comma);
+    }
+
+    box-shadow: $box-shadow;
+}
