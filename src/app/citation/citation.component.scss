@@ -4,8 +4,7 @@
     position: relative;
     background-color: var(--light-color);
     color: var(--dark-color);
-    padding: 1em;
-    width: 28rem;
+    padding: 1.5em;
     box-sizing: border-box;
     text-wrap: balance;
     border-radius: var(--radius);
@@ -19,7 +18,7 @@
     position: absolute;
     font-weight: 500;
     font-size: 10em;
-    @include text-shadow-effect;
+    @include text-shadow-short;
 }
 
 .citation::before {
@@ -32,6 +31,7 @@
     bottom: -8.5rem;
     right: -1.8rem;
     content: '”';
+    @include text-shadow-effect;
 }
 
 .auteur {

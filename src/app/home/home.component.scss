@@ -1,6 +1,7 @@
 .results {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 400px));
     justify-content: center;
-    padding: 1rem 0 1rem 0;
+    gap: 3rem;
+    padding: 2rem 3rem;
 }

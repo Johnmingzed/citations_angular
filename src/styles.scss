@@ -7,18 +7,22 @@
     --contrast-color: hsl(38, 100%, 50%);
     --light-color: hsl(38, 100%, 95%);
     --radius: 0.25rem;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 html,
 body {
     height: 100%;
     background-color: var(--bg-color);
-    color:var(--white-color);
+    color: var(--white-color);
 }
 
 h1 {
     font-size: 3rem;
-    color:var(--white-color);
+    color: var(--white-color);
     @include text-shadow-effect;
 }
 

@@ -1,0 +1,38 @@
+@import '../../../styles/mixins';
+
+.details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 2rem 3rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.details > * {
+    flex: 1 1 28rem;
+}
+
+.explication {
+    position: relative;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    box-sizing: border-box;
+    text-wrap: balance;
+    border-radius: var(--radius);
+    background-color: var(--light-color);
+    padding: 1.5em;
+    @include box-shadow-effect;
+}
+
+.explication::before {
+    content: 'Explication';
+    position:absolute;
+    top:-.7em;
+    left:-.7em;
+    font-weight: bold;
+    color:var(--contrast-color);
+    font-size:2rem;
+    @include text-shadow-short;
+}

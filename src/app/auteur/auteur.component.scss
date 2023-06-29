@@ -1,0 +1,56 @@
+@import '../../../styles/mixins';
+
+.author {
+    position: relative;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    box-sizing: border-box;
+    text-wrap: balance;
+    border-radius: var(--radius);
+    background-color: var(--light-color);
+    @include box-shadow-effect;
+}
+
+.photo {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+}
+
+img {
+    width:100%;
+    object-fit: cover;
+    mix-blend-mode: screen;
+    aspect-ratio: 16/9;
+    filter: grayscale(1) contrast(2);
+}
+
+.container{
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background-color: var(--dark-color);
+    mix-blend-mode: multiply;
+}
+
+.background{
+    border-radius: var(--radius) var(--radius) 0 0;
+    background-color: var(--contrast-color);
+    width:100%;
+}
+
+.authorName {
+    position: absolute;
+    left:-.05em;
+    bottom:-.25em;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--light-color);
+    margin:0;
+}
+
+.bio {
+    padding: 1.5em;
+    margin: 0;
+    font-weight: 500;
+}

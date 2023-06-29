@@ -8,6 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
 import { CitationComponent } from './citation/citation.component';
+import { CitationDetailsComponent } from './citation-details/citation-details.component';
+import { CitationRandomComponent } from './citation-random/citation-random.component';
+import { AuteurComponent } from './auteur/auteur.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { CitationComponent } from './citation/citation.component';
     HomeComponent,
     SearchComponent,
     FooterComponent,
-    CitationComponent
+    CitationComponent,
+    CitationDetailsComponent,
+    CitationRandomComponent,
+    AuteurComponent
   ],
   imports: [
     BrowserModule,

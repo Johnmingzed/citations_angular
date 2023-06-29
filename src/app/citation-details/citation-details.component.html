@@ -1,0 +1,7 @@
+<div class="details">
+    <app-citation *ngIf="citation" [citation]="citation"></app-citation>
+    <div *ngIf="citation?.auteur">
+        <app-auteur *ngIf="citation" [citation]="citation"></app-auteur>
+    </div>
+    <div class="explication" *ngIf="citation?.explication">{{ citation?.explication }}</div>
+</div>

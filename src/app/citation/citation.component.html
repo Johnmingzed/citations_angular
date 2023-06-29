@@ -1,4 +1,6 @@
-<div class="citation">
-    <h2>{{ citation.citation }}</h2>
-    <p class="auteur">- {{ citation.auteur}} -</p>
-</div>
+<a [routerLink]="['/details', citation.id]">
+    <div class="citation">
+        <h2>{{ citation.citation }}</h2>
+        <p class="auteur">- {{ citation.auteur ? citation.auteur : 'Anonyme' }} -</p>
+    </div>
+</a>
