@@ -13,8 +13,10 @@ export class CitationDetailsComponent {
   citationService = inject(CitationService);
   citation: Citation | undefined;
 
-  constructor(){
+  constructor() {
     const citationId: number = Number(this.route.snapshot.params['id']);
-    this.citation = this.citationService.getCitationById(citationId);
+    this.citationService.getCitationById(citationId).then(citation => {
+      this.citation = citation;
+    });
   }
 }

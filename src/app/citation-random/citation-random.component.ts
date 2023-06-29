@@ -11,8 +11,9 @@ export class CitationRandomComponent {
   citation: Citation | undefined;
   citationService: CitationService = inject(CitationService);
 
-  constructor(){
-    this.citation = this.citationService.getRandomCitation();
-    console.log(this.citation);
+  constructor() {
+    this.citationService.getRandomCitation().then(citation => {
+      this.citation = citation;
+    });
   }
 }

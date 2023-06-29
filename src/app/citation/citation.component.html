@@ -1,6 +1,6 @@
 <a [routerLink]="['/details', citation.id]">
     <div class="citation">
         <h2>{{ citation.citation }}</h2>
-        <p class="auteur">- {{ citation.auteur ? citation.auteur : 'Anonyme' }} -</p>
+        <p class="auteur">- {{ citation.auteur_id?.auteur ? citation.auteur_id?.auteur : 'Anonyme' }} -</p>
     </div>
 </a>

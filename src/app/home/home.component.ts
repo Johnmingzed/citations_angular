@@ -12,6 +12,8 @@ export class HomeComponent {
   citationService: CitationService = inject(CitationService);
 
   constructor() {
-    this.citations = this.citationService.getAllCitations();
+    this.citationService.getAllCitations().then(citations => {
+      this.citations = citations;
+    });
   }
 }
