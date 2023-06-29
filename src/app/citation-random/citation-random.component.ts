@@ -16,4 +16,8 @@ export class CitationRandomComponent {
       this.citation = citation;
     });
   }
+
+  /**
+   * Ajouter une méthode pour forcer la récupération d'une nouvelle citation
+   */
 }

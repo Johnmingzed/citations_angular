@@ -1,12 +1,19 @@
 @import '../../../styles/mixins';
 
+.form{
+    max-width:28rem;
+    margin:auto;
+    padding-inline:3rem;
+}
+
 #search {
     padding: .5em 1em;
     border-radius: var(--radius);
     font-size: 1rem;
     border-style: none;
     color: var(--dark-color);
-    width: 28rem;
+    width: 100%;
+    margin: auto;
     margin-bottom: 2em;
     @include box-shadow-effect;
 }

@@ -9,11 +9,13 @@ import { CitationService } from '../citation.service';
 })
 export class HomeComponent {
   citations: Citation[] = [];
+  filteredCitations : Citation[] = [];
   citationService: CitationService = inject(CitationService);
 
   constructor() {
     this.citationService.getAllCitations().then(citations => {
       this.citations = citations;
+      this.filteredCitations = citations;
     });
   }
 }
