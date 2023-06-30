@@ -1,6 +1,16 @@
-<a [routerLink]="['/details', citation.id]">
-    <div class="citation">
-        <h2>{{ citation.citation }}</h2>
-        <p class="auteur">- {{ citation.auteur_id?.auteur ? citation.auteur_id?.auteur : 'Anonyme' }} -</p>
-    </div>
-</a>
+<ng-container *ngIf="citation">
+    <a [routerLink]="['/details', citation.id]">
+        <div class="citation">
+            <h2>{{ citation.citation }}</h2>
+            <p class="auteur">- {{ citation.auteur_id?.auteur ? citation.auteur_id?.auteur : 'Anonyme' }} -</p>
+        </div>
+    </a>
+</ng-container>
+
+<ng-container *ngIf="auteur">
+    <a [routerLink]="['/details', citation.id]">
+        <div class="citation">
+            <h2>{{ citation.citation }}</h2>
+        </div>
+    </a>
+</ng-container>

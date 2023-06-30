@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CitationDetailsComponent } from './citation-details/citation-details.component';
 import { CitationRandomComponent } from './citation-random/citation-random.component';
+import { AuteurDetailsComponent } from './auteur-details/auteur-details.component';
+import { RouteReuseStrategy } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -22,8 +24,14 @@ const routes: Routes = [
     path: 'details/:id',
     component: CitationDetailsComponent,
     data: {
-      title: 'Les détails de la citation',
-      reuse: false
+      title: 'Les détails de la citation'
+    }
+  },
+  {
+    path: 'auteur/:name',
+    component: AuteurDetailsComponent,
+    data: {
+      title: 'Les détails d\'un auteur'
     }
   }
 ];

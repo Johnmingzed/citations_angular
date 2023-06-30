@@ -1,0 +1,18 @@
+<div class="details">
+    <div class="auteur">
+        <app-auteur *ngIf="auteur" [auteur]="auteur"></app-auteur>
+    </div>
+    <div class="container">
+        <div class="citations" *ngIf="auteur">
+            <!-- <app-citation *ngFor="let currentCitation of auteur?.citations" [citation]="currentCitation"></app-citation> -->
+            <ng-container *ngFor="let currentCitation of auteur?.citations">
+                <a [routerLink]="['/details', currentCitation.id]">
+                    <div class="citation">
+                        {{currentCitation.citation}}
+                    </div>
+                </a>
+            </ng-container>
+        </div>
+    </div>
+
+</div>

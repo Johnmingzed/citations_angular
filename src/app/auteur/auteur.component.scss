@@ -5,7 +5,7 @@
     background-color: var(--light-color);
     color: var(--dark-color);
     box-sizing: border-box;
-    text-wrap: balance;
+    // text-wrap: balance;
     border-radius: var(--radius);
     background-color: var(--light-color);
     @include box-shadow-effect;
@@ -53,4 +53,5 @@ img {
     padding: 1.5em;
     margin: 0;
     font-weight: 500;
+    text-align: start;
 }

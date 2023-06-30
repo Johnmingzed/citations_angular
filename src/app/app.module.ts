@@ -11,6 +11,7 @@ import { CitationComponent } from './citation/citation.component';
 import { CitationDetailsComponent } from './citation-details/citation-details.component';
 import { CitationRandomComponent } from './citation-random/citation-random.component';
 import { AuteurComponent } from './auteur/auteur.component';
+import { AuteurDetailsComponent } from './auteur-details/auteur-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AuteurComponent } from './auteur/auteur.component';
     CitationComponent,
     CitationDetailsComponent,
     CitationRandomComponent,
-    AuteurComponent
+    AuteurComponent,
+    AuteurDetailsComponent
   ],
   imports: [
     BrowserModule,

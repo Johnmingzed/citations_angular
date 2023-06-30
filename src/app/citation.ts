@@ -5,5 +5,5 @@ export interface Citation {
     auteur_id: {
         auteur: string | null;
         bio: string | null;
-    } | null
+    } | null;
 }

@@ -17,7 +17,10 @@ export class CitationRandomComponent {
     });
   }
 
-  /**
-   * Ajouter une méthode pour forcer la récupération d'une nouvelle citation
-   */
+  reloadPage() {
+    this.citationService.getRandomCitation().then(citation => {
+      this.citation = citation;
+    });
+  }
+
 }

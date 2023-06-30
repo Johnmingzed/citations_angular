@@ -1,14 +1,37 @@
-<div class="author">
-    <div class="photo">
-        <div class="background">
-            <div class="container">
-                <!-- img src="../../assets/jonathan.webp" alt="{{ citation.auteur_id?.auteur }}" -->
-                <img src="https://thispersondoesnotexist.com/" alt="{{ citation.auteur_id?.auteur }}">
+<ng-container *ngIf="citation">
+    <div class="author">
+        <a [routerLink]="['/auteur', citation.auteur_id?.auteur]">
+            <div class="photo">
+                <div class="background">
+                    <div class="container">
+                        <!-- img src="../../assets/jonathan.webp" alt="{{ citation.auteur_id?.auteur }}" -->
+                        <img src="https://thispersondoesnotexist.com/" alt="{{ citation.auteur_id?.auteur }}">
+                    </div>
+                </div>
+                <div class="authorName">
+                    {{citation.auteur_id?.auteur}}
+                </div>
             </div>
-        </div>
-        <div class="authorName">
-            {{citation.auteur_id?.auteur}}
-        </div>
+        </a>
+        <p class="bio">{{ citation.auteur_id?.bio }}</p>
     </div>
-    <p class="bio">{{ citation.auteur_id?.bio }}</p>
-</div>
+</ng-container>
+
+<ng-container *ngIf="auteur">
+    <div class="author">
+        <a [routerLink]="['/auteur', auteur.auteur]">
+            <div class="photo">
+                <div class="background">
+                    <div class="container">
+                        <!-- img src="../../assets/jonathan.webp" alt="{{ citation.auteur_id?.auteur }}" -->
+                        <img src="https://thispersondoesnotexist.com/" alt="{{ auteur.auteur }}">
+                    </div>
+                </div>
+                <div class="authorName">
+                    {{auteur.auteur}}
+                </div>
+            </div>
+        </a>
+        <p class="bio">{{ auteur.bio }}</p>
+    </div>
+</ng-container>

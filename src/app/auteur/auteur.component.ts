@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Citation } from '../citation';
+import { Auteur } from '../auteur';
 
 @Component({
   selector: 'app-auteur',
@@ -9,4 +10,5 @@ import { Citation } from '../citation';
 
 export class AuteurComponent {
   @Input() citation!: Citation;
+  @Input() auteur!: Auteur;
 }

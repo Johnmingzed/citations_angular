@@ -1,0 +1,67 @@
+@import '../../../styles/mixins';
+
+.details {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    padding: 2rem 3rem;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.auteur {
+    flex: 1 1 20rem;
+}
+
+.container {
+    flex: 2 2 20rem;
+}
+
+.citations {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20ch,1fr)) ;
+    justify-content: center;
+    gap: 3rem;
+}
+
+@import '../../../styles/mixins';
+
+.citation {
+    position: relative;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    padding: 1.5em;
+    box-sizing: border-box;
+    text-wrap: balance;
+    border-radius: var(--radius);
+    background-color: var(--light-color);
+    @include box-shadow-effect;
+}
+
+.citation::before,
+.citation::after {
+    color: var(--contrast-color);
+    position: absolute;
+    font-weight: 500;
+    font-size: 10em;
+    @include text-shadow-short;
+}
+
+.citation::before {
+    left: -2rem;
+    top: -3rem;
+    content: '“';
+}
+
+.citation::after {
+    bottom: -8.5rem;
+    right: -1.8rem;
+    content: '”';
+    @include text-shadow-effect;
+}
+
+.auteur {
+    font-style: italic;
+    font-weight: 500;
+}
