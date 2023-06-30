@@ -19,10 +19,7 @@ export class AuteurDetailsComponent {
     this.auteurService.getAuteurByName(auteurName).then(auteur => {
       this.auteur = auteur;
     })
-    this.toggleFooter(true);
+    this.toggleFooterService.toggleFooter(true);
   }
 
-  toggleFooter(showFooter: boolean): void {
-    this.toggleFooterService.toggleFooter(showFooter);
-  }
 }

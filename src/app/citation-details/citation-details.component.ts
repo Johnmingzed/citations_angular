@@ -19,10 +19,7 @@ export class CitationDetailsComponent {
     this.citationService.getCitationById(citationId).then(citation => {
       this.citation = citation;
     });
-    this.toggleFooter(true);
+    this.toggleFooterService.toggleFooter(true);
   }
 
-  toggleFooter(showFooter: boolean): void {
-    this.toggleFooterService.toggleFooter(showFooter);
-  }
 }

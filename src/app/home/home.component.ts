@@ -18,10 +18,7 @@ export class HomeComponent {
       this.citations = citations;
       this.filteredCitations = citations;
     });
-    this.toggleFooter(true);
+    this.toggleFooterService.toggleFooter(true);
   }
 
-  toggleFooter(showFooter: boolean): void {
-    this.toggleFooterService.toggleFooter(showFooter);
-  }
 }

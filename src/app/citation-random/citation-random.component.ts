@@ -18,18 +18,14 @@ export class CitationRandomComponent {
     this.citationService.getRandomCitation().then(citation => {
       this.citation = citation;
     });
-    this.toggleFooter(false);
+    this.toggleFooterService.toggleFooter(false);
   }
 
   reloadPage() {
     this.citationService.getRandomCitation().then(citation => {
       this.citation = citation;
-      this.toggleFooter(false);
+      this.toggleFooterService.toggleFooter(false);
     });
-  }
-
-  toggleFooter(showFooter: boolean): void {
-    this.toggleFooterService.toggleFooter(showFooter);
   }
 
 }
