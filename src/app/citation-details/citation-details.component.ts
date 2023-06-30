@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Citation } from '../citation';
 import { CitationService } from '../citation.service';
+import { ToggleFooterService } from '../toggle-footer.service';
 
 @Component({
   selector: 'app-citation-details',
@@ -13,10 +14,15 @@ export class CitationDetailsComponent {
   citationService = inject(CitationService);
   citation: Citation | undefined;
 
-  constructor() {
+  constructor(private toggleFooterService: ToggleFooterService) {
     const citationId: number = Number(this.route.snapshot.params['id']);
     this.citationService.getCitationById(citationId).then(citation => {
       this.citation = citation;
     });
+    this.toggleFooter(true);
+  }
+
+  toggleFooter(showFooter: boolean): void {
+    this.toggleFooterService.toggleFooter(showFooter);
   }
 }

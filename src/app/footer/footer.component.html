@@ -1,3 +1,5 @@
 <footer>
-    <a [routerLink]="['/random']">Afficher une citation au hasard</a>
+    <ng-container *ngIf="showFooter">
+        <a [routerLink]="['/random']">Afficher une citation au hasard</a>
+    </ng-container>
 </footer>

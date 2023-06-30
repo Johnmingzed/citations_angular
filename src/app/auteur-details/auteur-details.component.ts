@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Auteur } from '../auteur';
 import { AuteurService } from '../auteur.service';
+import { ToggleFooterService } from '../toggle-footer.service';
 
 @Component({
   selector: 'app-auteur-details',
@@ -11,13 +12,17 @@ import { AuteurService } from '../auteur.service';
 export class AuteurDetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   auteurService = inject(AuteurService);
-  auteur:Auteur | undefined;
+  auteur: Auteur | undefined;
 
-  constructor() {
-    const auteurName:string = this.route.snapshot.params['name'];
+  constructor(private toggleFooterService: ToggleFooterService) {
+    const auteurName: string = this.route.snapshot.params['name'];
     this.auteurService.getAuteurByName(auteurName).then(auteur => {
       this.auteur = auteur;
-      console.log(auteur);
     })
+    this.toggleFooter(true);
+  }
+
+  toggleFooter(showFooter: boolean): void {
+    this.toggleFooterService.toggleFooter(showFooter);
   }
 }

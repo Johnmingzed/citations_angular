@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { Citation } from '../citation';
 import { CitationService } from '../citation.service';
+import { ToggleFooterService } from '../toggle-footer.service';
 
 @Component({
   selector: 'app-home',
@@ -9,13 +10,18 @@ import { CitationService } from '../citation.service';
 })
 export class HomeComponent {
   citations: Citation[] = [];
-  filteredCitations : Citation[] = [];
+  filteredCitations: Citation[] = [];
   citationService: CitationService = inject(CitationService);
 
-  constructor() {
+  constructor(private toggleFooterService: ToggleFooterService) {
     this.citationService.getAllCitations().then(citations => {
       this.citations = citations;
       this.filteredCitations = citations;
     });
+    this.toggleFooter(true);
+  }
+
+  toggleFooter(showFooter: boolean): void {
+    this.toggleFooterService.toggleFooter(showFooter);
   }
 }

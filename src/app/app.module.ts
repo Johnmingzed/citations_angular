@@ -12,6 +12,7 @@ import { CitationDetailsComponent } from './citation-details/citation-details.co
 import { CitationRandomComponent } from './citation-random/citation-random.component';
 import { AuteurComponent } from './auteur/auteur.component';
 import { AuteurDetailsComponent } from './auteur-details/auteur-details.component';
+import { ToggleFooterService } from './toggle-footer.service';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { AuteurDetailsComponent } from './auteur-details/auteur-details.componen
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ToggleFooterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
