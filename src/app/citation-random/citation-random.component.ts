@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Citation } from '../citation';
 import { CitationService } from '../citation.service';
-import { ToggleFooterService } from '../toggle-footer.service';
+import { ToggleService } from '../toggle.service';
 
 @Component({
   selector: 'app-citation-random',
@@ -12,19 +12,20 @@ export class CitationRandomComponent {
   citation: Citation | undefined;
 
   constructor(
-    private toggleFooterService: ToggleFooterService,
+    private toggleService: ToggleService,
     private citationService: CitationService
   ) {
     this.citationService.getRandomCitation().then(citation => {
       this.citation = citation;
     });
-    this.toggleFooterService.toggleFooter(false);
+    this.toggleService.toggleFooter(false);
+    this.toggleService.toggleSearch(false);
   }
 
   reloadPage() {
     this.citationService.getRandomCitation().then(citation => {
       this.citation = citation;
-      this.toggleFooterService.toggleFooter(false);
+      this.toggleService.toggleFooter(false);
     });
   }
 

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ToggleFooterService } from '../toggle-footer.service';
+import { ToggleService } from '../toggle.service';
 
 @Component({
   selector: 'app-footer',
@@ -9,10 +9,10 @@ import { ToggleFooterService } from '../toggle-footer.service';
 export class FooterComponent implements OnInit {
   showFooter = true;
 
-  constructor(private toggleFooterService: ToggleFooterService) { }
+  constructor(private toggleService: ToggleService) { }
 
   ngOnInit(): void {
-    this.toggleFooterService.showFooter$.subscribe((showFooter) => {
+    this.toggleService.showFooter$.subscribe((showFooter) => {
       this.showFooter = showFooter;
     });
   }

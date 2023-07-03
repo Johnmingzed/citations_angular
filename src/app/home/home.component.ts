@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Citation } from '../citation';
 import { CitationService } from '../citation.service';
-import { ToggleFooterService } from '../toggle-footer.service';
+import { ToggleService } from '../toggle.service';
 import { SearchService } from '../search.service';
 
 @Component({
@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private citationService: CitationService,
-    private toggleFooterService: ToggleFooterService,
+    private toggleService: ToggleService,
     private search: SearchService
   ) {
     this.citationService.getAllCitations().then(citations => {
@@ -22,7 +22,8 @@ export class HomeComponent implements OnInit {
       this.filteredCitations = citations;
       console.log('✅ Home contructor', this.filteredCitations);
     });
-    this.toggleFooterService.toggleFooter(true);
+    this.toggleService.toggleFooter(true);
+    this.toggleService.toggleSearch(true);
   }
 
   ngOnInit() {

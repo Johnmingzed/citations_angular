@@ -12,7 +12,7 @@ import { CitationDetailsComponent } from './citation-details/citation-details.co
 import { CitationRandomComponent } from './citation-random/citation-random.component';
 import { AuteurComponent } from './auteur/auteur.component';
 import { AuteurDetailsComponent } from './auteur-details/auteur-details.component';
-import { ToggleFooterService } from './toggle-footer.service';
+import { ToggleService } from './toggle.service';
 import { SearchService } from './search.service';
 
 @NgModule({
@@ -32,7 +32,7 @@ import { SearchService } from './search.service';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [ToggleFooterService,SearchService],
+  providers: [ToggleService,SearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
