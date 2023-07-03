@@ -8,7 +8,7 @@ export class CitationService {
 
   constructor() { }
 
-  url = 'http://localhost:8000/api';
+  url = 'https://localhost:8000/api';
 
   async getAllCitations(): Promise<Citation[]> {
     const data = await fetch(this.url);
