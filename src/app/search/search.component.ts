@@ -1,20 +1,17 @@
 import { Component } from '@angular/core';
-import { HomeComponent } from '../home/home.component';
+import { SearchService } from '../search.service';
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss']
 })
-export class SearchComponent extends HomeComponent {
-  filterResults(text: string) {
-    if (!text) {
-      this.filteredCitations = this.citations;
-    }
+export class SearchComponent {
 
-    this.filteredCitations = this.citations.filter(
-      citation => citation?.citation.toLowerCase().includes(text.toLowerCase())
-    );
-    console.log(this.filteredCitations);
+  constructor(private search: SearchService) { }
+
+  filterBy(text: string) {
+    this.search.filterResults(text);
+    console.log('Demande de filtrage avec : ', text);
   }
 }

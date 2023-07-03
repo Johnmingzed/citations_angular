@@ -1,3 +1,3 @@
 <div class="form">
-    <input type="search" name="search" id="search" placeholder="Rechercher un mot ou un auteur" #filter (change)="filterResults(filter.value)">
+    <input type="search" name="search" id="search" placeholder="Rechercher un mot ou un auteur" #filter (keyup)="filterBy(filter.value)">
 </div>
