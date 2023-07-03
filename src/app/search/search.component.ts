@@ -9,6 +9,7 @@ import { ToggleService } from '../toggle.service';
 })
 export class SearchComponent {
   showSearch = true;
+  filter:string = '';
 
   constructor(
     private search: SearchService,
@@ -17,14 +18,18 @@ export class SearchComponent {
 
   filterBy(text: string) {
     this.search.filterResults(text);
-    console.log('Demande de filtrage avec : ', text);
+    this.filter = text;
   }
 
-  ngOnInit():void {
+  clearSearch() {
+    this.search.filterResults('');
+  }
+
+  ngOnInit(): void {
     this.toggleService.showSearch$.subscribe((showSearch) => {
       this.showSearch = showSearch;
-    }
-    )
+    })
+    this.filter = '';
 
   }
 }

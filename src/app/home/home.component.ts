@@ -20,7 +20,6 @@ export class HomeComponent implements OnInit {
     this.citationService.getAllCitations().then(citations => {
       this.search.citationsToFilter = citations;
       this.filteredCitations = citations;
-      console.log('✅ Home contructor', this.filteredCitations);
     });
     this.toggleService.toggleFooter(true);
     this.toggleService.toggleSearch(true);

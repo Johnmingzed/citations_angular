@@ -10,9 +10,7 @@ export class SearchService {
   private filteredCitationsSubject = new BehaviorSubject<Citation[]>([]);
   filteredCitations$ = this.filteredCitationsSubject.asObservable();
 
-  constructor() {
-    console.log('✅ Search constructor', this.citationsToFilter, this.filteredCitations$);
-  }
+  constructor() { }
 
   filterResults(text: string) {
     if (!text) {
@@ -22,7 +20,5 @@ export class SearchService {
     this.filteredCitationsSubject.next(this.citationsToFilter.filter(
       citation => citation?.citation.toLowerCase().includes(text.toLowerCase())
     ));
-
-    console.log(this.filteredCitations$);
   }
 }
