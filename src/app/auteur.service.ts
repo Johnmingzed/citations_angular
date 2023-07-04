@@ -8,7 +8,7 @@ export class AuteurService {
 
   constructor() { }
 
-  url = 'https://localhost:8000/api/auteur';
+  url = 'https://jonathan.lesacteursduweb.fr/citations_backoffice/public/api/auteur';
 
   // http://localhost:8000/api/auteur/claude%20traor%C3%A9
   async getAuteurByName(auteur: string): Promise<Auteur | undefined> {

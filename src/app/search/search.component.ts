@@ -9,7 +9,7 @@ import { ToggleService } from '../toggle.service';
 })
 export class SearchComponent {
   showSearch = true;
-  filter:string = '';
+  filter: string = '';
 
   constructor(
     private search: SearchService,
@@ -23,6 +23,7 @@ export class SearchComponent {
 
   clearSearch() {
     this.search.filterResults('');
+    this.filter = '';
   }
 
   ngOnInit(): void {
@@ -30,6 +31,5 @@ export class SearchComponent {
       this.showSearch = showSearch;
     })
     this.filter = '';
-
   }
 }

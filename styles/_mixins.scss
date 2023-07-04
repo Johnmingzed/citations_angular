@@ -6,7 +6,7 @@ $light-value: 13;
 
     @for $i from 1 through 15 {
         $offset: $i * $offset-increment;
-        $value: $light-value +$i;
+        $value: $light-value + $i;
         $text-shadow: append($text-shadow, $offset $offset 0 hsl(210, 20%, percentage(calc($value / 100))), comma);
     }
 
@@ -18,7 +18,7 @@ $light-value: 13;
 
     @for $i from 1 through 7 {
         $offset: $i * $offset-increment;
-        $value: $light-value +$i*2;
+        $value: $light-value + $i*2;
         $text-shadow: append($text-shadow, $offset $offset 0 hsl(210, 20%, percentage(calc($value / 100))), comma);
     }
 
@@ -30,7 +30,7 @@ $light-value: 13;
 
     @for $i from 1 through 15 {
         $offset: $i * $offset-increment;
-        $value: $light-value +$i;
+        $value: $light-value + $i;
         $box-shadow: append($box-shadow, $offset $offset 0 hsl(210, 20%, percentage(calc($value / 100))), comma);
     }
 

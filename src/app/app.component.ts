@@ -10,13 +10,14 @@ import { SearchComponent } from './search/search.component';
 })
 export class AppComponent {
   title = 'Citations';
-  // @ViewChild(SearchComponent) searchBar: SearchComponent;
+  @ViewChild(SearchComponent, {static:true}) searchBar!: SearchComponent;
 
   constructor(private search: SearchService) { }
 
   resetSearch() {
     this.search.filterResults('');
-  //  console.log(this.searchBar?.filter);
-  //  this.searchBar.filter = '';
+    console.log(this.searchBar?.filter);
+    this.searchBar.clearSearch();
+    console.log(this.searchBar?.filter);
   }
 }

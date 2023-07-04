@@ -8,7 +8,7 @@ export class CitationService {
 
   constructor() { }
 
-  url = 'https://localhost:8000/api';
+  url = 'https://jonathan.lesacteursduweb.fr/citations_backoffice/public/api';
 
   async getAllCitations(): Promise<Citation[]> {
     const data = await fetch(this.url);
