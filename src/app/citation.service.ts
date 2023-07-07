@@ -8,6 +8,7 @@ export class CitationService {
 
   constructor() { }
   url:string = 'https://127.0.0.1:8000/api';
+  // url:string = 'http://127.0.0.1:8000/api';
   // url: string = 'https://jonathan.lesacteursduweb.fr/citations_backoffice/public/api';
 
   async getAllCitations(): Promise<Citation[]> {
